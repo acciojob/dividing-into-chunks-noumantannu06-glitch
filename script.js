@@ -29,27 +29,6 @@ const divide = (arr, n) => {
     return result;
   }
 
-  // Example tests
-  const tests = [
-    { input: [1, 2, 3, 4, 1, 0, 2, 2], n: 5 },
-    { input: [4, 3, 2, 1], n: 4 },
-    { input: [2, 1, 1, 1, 1, 1], n: 3 },
-    { input: [-1, 2, 3, -2, 4], n: 5 }
-  ];
-
-  const testsEl = document.getElementById("tests");
-
-  tests.forEach(({ input, n }) => {
-    const chunks = divide(input, n);
-    const div = document.createElement("div");
-    div.className = "test";
-    div.innerHTML = `
-      <strong>Input:</strong> [${input.join(", ")}] | n = ${n}<br/>
-      <strong>Output:</strong> ${JSON.stringify(chunks)}
-    `;
-    testsEl.appendChild(div);
-  });
-};
-
+  
 const n = prompt("Enter n: ");
 alert(JSON.stringify(divide(arr, n)));
